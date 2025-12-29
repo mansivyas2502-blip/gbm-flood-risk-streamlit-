@@ -1,7 +1,8 @@
 # -----------------------------------
 # Streamlit + Folium Flood Risk App
 # -----------------------------------
-
+import streamlit as st
+from streamlit_folium import st_folium
 import streamlit as st
 import pandas as pd
 import folium
@@ -127,5 +128,7 @@ folium.LayerControl().add_to(m)
 # -----------------------------------
 # Show map
 # -----------------------------------
+st.subheader("Flood Risk Map (GBM Basin)")
+st_folium(m, width=900, height=600)
 
 st_folium(m, width=1300, height=650)
